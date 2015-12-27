@@ -1,0 +1,27 @@
+apply plugin: 'scala'
+
+
+repositories {
+    jcenter()
+}
+
+ext {
+    scalaVersion= '2.11'
+    scalaFullVersion= "${scalaVersion}.7"
+    scalatraVersion= '2.4.0'
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+
+    compile "org.scala-lang:scala-library:$scalaFullVersion"
+
+    // We use Scalatest for testing our library
+    compile "org.scalatra:scalatra_$scalaVersion:$scalatraVersion"
+    compile "org.scalatra:scalatra-jetty_$scalaVersion:$scalatraVersion"
+    compile 'org.eclipse.jetty:jetty-webapp:9.2.14.v20151106'
+    compile "com.escalatesoft.subcut:subcut_$scalaVersion:2.1"
+    testCompile 'junit:junit:4.12'
+    testCompile "org.scalatest:scalatest_$scalaVersion:2.2.5"
+    testRuntime 'org.scala-lang.modules:scala-xml_2.11:1.0.5'
+}
