@@ -16,9 +16,10 @@ dependencies {
 
     compile "org.scala-lang:scala-library:$scalaFullVersion"
 
-    // We use Scalatest for testing our library
     compile "org.scalatra:scalatra_$scalaVersion:$scalatraVersion"
     compile "org.scalatra:scalatra-jetty_$scalaVersion:$scalatraVersion"
+    compile "org.scalatra:scalatra-json_$scalaVersion:$scalatraVersion"
+    compile "org.json4s:json4s-jackson_$scalaVersion:3.3.0"
     compile 'org.eclipse.jetty:jetty-webapp:9.2.14.v20151106'
     compile "com.escalatesoft.subcut:subcut_$scalaVersion:2.1"
     testCompile 'junit:junit:4.12'
